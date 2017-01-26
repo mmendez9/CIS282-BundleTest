@@ -71,7 +71,7 @@
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/stLength"
             android:layout_marginStart="53dp"
-            android:singleLine="true" />
+            android:singleLine="false" />
 
         <TextView
             android:text="@string/enter_width"
