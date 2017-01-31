@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CIS282-BundleTest-master.iml" filepath="$PROJECT_DIR$/CIS282-BundleTest-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CIS282-BundleTest.iml" filepath="$PROJECT_DIR$/CIS282-BundleTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
