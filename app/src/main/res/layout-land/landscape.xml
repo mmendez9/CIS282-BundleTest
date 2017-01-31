@@ -16,16 +16,6 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:context="edu.dtcc.emailman.bundletest.MainActivity">
 
-        <TextView
-            android:text="@string/perimeter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:id="@+id/stPerimeter"
-            android:textAppearance="@android:style/TextAppearance.Material.Large"
-            android:layout_below="@+id/stArea"
-            android:layout_alignParentStart="true" />
-
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -76,25 +66,14 @@
             android:layout_alignParentEnd="true" />
 
         <TextView
-            android:id="@+id/stLength"
+            android:text="@string/perimeter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/enter_length"
+            android:layout_marginTop="24dp"
+            android:id="@+id/stPerimeter"
             android:textAppearance="@android:style/TextAppearance.Material.Large"
-            android:layout_alignBaseline="@+id/etLength"
-            android:layout_alignBottom="@+id/etLength"
-            android:layout_toEndOf="@+id/stArea"
-            android:layout_marginStart="31dp" />
-
-        <TextView
-            android:text="@string/enter_width"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/stWidth"
-            android:textAppearance="@android:style/TextAppearance.Material.Large"
-            android:layout_alignBaseline="@+id/etWidth"
-            android:layout_alignBottom="@+id/etWidth"
-            android:layout_alignStart="@+id/stLength" />
+            android:layout_below="@+id/stArea"
+            android:layout_alignStart="@+id/stArea" />
 
         <TextView
             android:text="@string/area"
@@ -102,9 +81,28 @@
             android:layout_height="wrap_content"
             android:id="@+id/stArea"
             android:textAppearance="@android:style/TextAppearance.Material.Large"
-            android:layout_marginStart="70dp"
+            android:layout_marginStart="96dp"
             android:layout_below="@+id/etWidth"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="13dp" />
+
+        <TextView
+            android:text="@string/enter_width"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stWidth"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:layout_alignBottom="@+id/etWidth"
+            android:layout_alignStart="@+id/stArea" />
+
+        <TextView
+            android:id="@+id/stLength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_length"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:layout_above="@+id/etWidth"
+            android:layout_alignStart="@+id/stWidth" />
     </RelativeLayout>
 
 </LinearLayout>
