@@ -10,45 +10,37 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.dtcc.emailman.bundletest.MainActivity">
 
-    <EditText
+    <TextView
+        android:text="@string/perimeter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:layout_below="@+id/etLength"
-        android:layout_alignStart="@+id/etLength"
+        android:id="@+id/stPerimeter"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:layout_marginStart="23dp"
+        android:layout_alignBaseline="@+id/etLength"
+        android:layout_alignBottom="@+id/etLength"
+        android:layout_toEndOf="@+id/btCalculate" />
+
+    <TextView
+        android:text="@string/zero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:id="@+id/tvArea"
         android:layout_marginTop="10dp"
-        android:id="@+id/etWidth"
-        android:singleLine="false" />
-
-    <TextView
-        android:text="@string/zero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/stArea"
-        android:layout_alignStart="@+id/etWidth"
-        android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:id="@+id/tvArea" />
-
-    <TextView
-        android:text="@string/zero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/stPerimeter"
-        android:layout_alignStart="@+id/tvArea"
-        android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:id="@+id/tvPerimeter" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/etLength"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="101dp"
-        android:singleLine="false" />
+        android:layout_toEndOf="@+id/stPerimeter"
+        android:layout_marginStart="36dp" />
+
+    <TextView
+        android:text="@string/area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stArea"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:layout_marginStart="24dp"
+        android:layout_alignBottom="@+id/etWidth"
+        android:layout_alignStart="@+id/stPerimeter" />
 
     <Button
         android:text="@string/calculate"
@@ -56,29 +48,40 @@
         android:layout_height="wrap_content"
         android:id="@+id/btCalculate"
         android:onClick="onCalcClick"
-        android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/stWidth" />
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="@string/perimeter"
+        android:text="@string/zero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:id="@+id/stPerimeter"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:layout_below="@+id/stArea"
-        android:layout_toStartOf="@+id/tvPerimeter"
-        android:layout_marginEnd="60dp" />
+        android:id="@+id/tvPerimeter"
+        android:layout_alignBaseline="@+id/stArea"
+        android:layout_alignBottom="@+id/stArea"
+        android:layout_alignStart="@+id/tvArea" />
 
-    <TextView
-        android:text="@string/area"
-        android:layout_width="wrap_content"
+    <EditText
+        android:layout_width="100sp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:id="@+id/stArea"
-        android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:layout_below="@+id/etWidth"
-        android:layout_alignStart="@+id/stPerimeter" />
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/etWidth"
+        android:layout_marginEnd="16dp"
+        android:layout_above="@+id/btCalculate"
+        android:layout_alignEnd="@+id/btCalculate"
+        android:layout_marginBottom="17dp" />
+
+    <EditText
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/etLength"
+        android:singleLine="false"
+        android:layout_alignBaseline="@+id/tvArea"
+        android:layout_alignBottom="@+id/tvArea"
+        android:layout_toEndOf="@+id/stLength" />
 
     <TextView
         android:text="@string/enter_width"
@@ -86,8 +89,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/stWidth"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:layout_alignTop="@+id/etWidth"
-        android:layout_alignStart="@+id/stArea" />
+        android:layout_alignBaseline="@+id/etWidth"
+        android:layout_alignBottom="@+id/etWidth"
+        android:layout_alignEnd="@+id/stLength" />
 
     <TextView
         android:id="@+id/stLength"
@@ -95,7 +99,7 @@
         android:layout_height="wrap_content"
         android:text="@string/enter_length"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:layout_alignBaseline="@+id/etLength"
+        android:layout_marginEnd="23dp"
         android:layout_alignBottom="@+id/etLength"
-        android:layout_alignStart="@+id/stWidth" />
+        android:layout_toStartOf="@+id/etWidth" />
 </RelativeLayout>
